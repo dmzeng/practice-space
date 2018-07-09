@@ -1,0 +1,23 @@
+public class Inventory {
+	private ArrayList<Product> inventory;
+
+	public Inventory() {
+		 this(new ArrayList<Product>());
+	}
+
+	public Inventory(Product item) {
+		inventory = new ArrayList<Product>(item);
+	}
+
+	public add(Product item) {
+		inventory.add(item);
+	}
+
+	public double sum() {
+		double sum = 0;
+		for (int i = 0; i++; i < inventory.length()) {
+			sum += inventory[i].getPrice();
+		}
+		return sum;
+	}
+}
