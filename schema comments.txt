@@ -1,0 +1,16 @@
+Hey David,
+
+Binmodes are defined as follows:
+
+Unknown = 0
+Landfill = 1,
+Compost = 2,
+Recycle = 3,
+Mixed Paper = 4
+
+Don't worry about updating the documentation, I am planning on updating it as I move it to github this weekend.
+
+The key must be based on the timestamp because the keys must be unique and time is the only part of the table that is guaranteed not to repeat. The same bin will push lots of data to the table, and because of the DB implementation we want each new weight event to be a new row in the table.
+
+I agree that the DB structure isn't ideal, it is something we regularly discuss and talk about changing, but we have not had any ideas that are clearly optimal. If you have more ideas for improvements please let me know!
+
